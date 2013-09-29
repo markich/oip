@@ -1,4 +1,4 @@
-GUILDFLAGS= -lcryptopp -lSDL -lSDL_image `freetype-config --libs` -lpcap
+BUILDFLAGS= -lcryptopp -lSDL -lSDL_image `freetype-config --libs` -lpcap
 SERVERLDFLAGS= -lcryptopp -lSDL -lpcap
 CPPFLAGS = -g `freetype-config --cflags` 
 all: oipgui oipd
@@ -14,9 +14,10 @@ entitytest: entitytest.o entity.o text.o entityset.o
 particletest: particletest.o particle.o text.o image.o kdtree.o
 
 pmtobj = particlemanagertest.o particle.o text.o image.o kdtree.o particlemanager.o entityset.o entity.o namecache.o
+
 particlemanagertest: ${pmtobj}
 	g++ ${CPPFLAGS} ${pmtobj} ${LDFLAGS} -o particlemanagertest
-	
+
 
 testclientmanager: testclientmanager.o clientmanager.o packetmanager.o particlemanager.o kdtree.o entity.o entityset.o image.o text.o particle.o clientpm.o clientmanager.o messages.o 
 
@@ -29,7 +30,7 @@ oipd: ${coreobj} oipd.o
 
 
 oipgui: ${coreobj} ${guiobj} ${widgets} oipgui.o 
-	g++ ${coreobj} ${guiobj} ${widgets} oipgui.o ${GUILDFLAGS} -o oipgui
+	g++ ${coreobj} ${guiobj} ${widgets} oipgui.o ${BUILDFLAGS} -o oipgui
 
 guitest: guitest.o font.o
 
@@ -47,7 +48,7 @@ dist: distclean
 	cp -r * .tmp/oip/
 	rm -f .tmp/oip/oip.conf
 	echo "#the shared secret used for encryption" >> .tmp/oip/oip.conf
-	echo "secret pleasepleasechangeme" >> .tmp/oip/oip.conf
+	echo "secret OIP4OSX" >> .tmp/oip/oip.conf
 	echo "" >> .tmp/oip/oip.conf
 	echo "#Which IP addresses should be highlighted" >> .tmp/oip/oip.conf
 	echo "localnet 10.1.0.0" >> .tmp/oip/oip.conf
@@ -59,7 +60,7 @@ dist: distclean
 
 
 testiptree: iptree.o testiptree.o ${coreobj} ${guiobj} 
-	g++ ${CPPFLAGS} ${coreobj} ${guiobj} iptree.o testiptree.o ${GUILDFLAGS} -o testiptree
+	g++ ${CPPFLAGS} ${coreobj} ${guiobj} iptree.o testiptree.o ${BUILDFLAGS} -o testiptree
 
 .PHONY: clean distclean $(COMMON)/flowdata.o
 
