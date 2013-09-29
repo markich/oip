@@ -2,6 +2,15 @@
 
 ## About
 
+OIP is a visualization in which individual machine IPs are placed randomly on a display, and packets are visualized as different sized dots flowing from one machine to another.
+
+### Architecture
+
+OIP is primarily a server/client architecture. The server analyzes traffic on a given port, and streams summaries to clients over a udp session. The packets are encrypted using a shared AES key. The server should have two interfaces. One of them should be connected to a mirror interface, and the other should be used for the client connections.
+
+The client can also be used as a stand-alone app by reading pcap files.
+
+### License
 License GPLv3 project: so enjoy and have fun.
 
 You need to install these on debian-based distros
@@ -10,13 +19,12 @@ You need to install these on debian-based distros
 
 
 ## Introduction
---------------
+
 This is an update and modification of the forked OIP project from /eldraco on https://github.com/eldraco/oip to run on OS X Mountain Lion.
 
 Original source code on: https://it.wiki.usu.edu/OIP
 
 ## How-To
---------------
 
 ### Command line
 
@@ -53,7 +61,7 @@ Keyboard keys:
 
 
 ## Installation
-------------
+
 ### Quick setup:
 
 1. Checkout the master branch 
@@ -66,7 +74,9 @@ Keyboard keys:
 3. Modifiy the oip.conf file to suite your needs (Optional).
 
 ## Authors
--------
-I. Original code: Rian Shelley (Utah State Univeristy).
-II. Forked code for Debian: Sebastian Garcia (eldraco@gmail.com) and Vojtech Uhlir (wojtyla@agents.felk.cvut.cz) (Czech Technical University)
-III. Forked code for OS X: Marcos Jesús Vivar (marcosjvivar@gmail.com) (Universidad F.A.S.T.A.)
+
+1. Original code: Rian Shelley (Utah State Univeristy)
+
+2. Forked code for Debian: Sebastian Garcia (eldraco@gmail.com) and Vojtech Uhlir (wojtyla@agents.felk.cvut.cz) (Czech Technical University)
+
+3. Forked code for OS X: Marcos Jes&ucute;s Vivar (marcosjvivar@gmail.com) (Universidad F.A.S.T.A.)
