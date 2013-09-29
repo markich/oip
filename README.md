@@ -31,12 +31,12 @@ Original source code on: https://it.wiki.usu.edu/OIP
 #### Parameters
 
 1. -e argument to speed up the analysis of pcap files:
-    -e 1000 is normal
-    -e 100 is 10x faster
-    -e 10 is 100x faster
+    *) -e 1000 is normal
+    *) -e 100 is 10x faster
+    *) -e 10 is 100x faster
 
 2. -c argument to give the pcap file name in the command line:
-    If you give a pcap file name, the analysis starts right away.
+    *) If you give a pcap file name, the analysis starts right away.
 
 3. Pause/Play the capture by pressing the letter p.
 
