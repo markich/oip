@@ -42,12 +42,12 @@ Original source code on: https://it.wiki.usu.edu/OIP
 
 #### Color code:
 
-    On packet-balls:
+##### On packet-balls:
     - Red for UDP
     - Green for TCP
     - White for ICMP
 
-    On hosts:
+##### On hosts:
     - Unknown still
 
 ### GUI
