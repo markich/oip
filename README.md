@@ -67,6 +67,6 @@ Keyboard keys:
 
 ## Authors
 -------
-Original code: Rian Shelley (Utah State Univeristy).
-Forked code for Debian: Sebastian Garcia (eldraco@gmail.com) and Vojtech Uhlir (wojtyla@agents.felk.cvut.cz) (Czech Technical University)
-Forked code for OS X: Marcos Jesús Vivar (marcosjvivar@gmail.com) (Universidad F.A.S.T.A.)
+I. Original code: Rian Shelley (Utah State Univeristy).
+II. Forked code for Debian: Sebastian Garcia (eldraco@gmail.com) and Vojtech Uhlir (wojtyla@agents.felk.cvut.cz) (Czech Technical University)
+III. Forked code for OS X: Marcos Jesús Vivar (marcosjvivar@gmail.com) (Universidad F.A.S.T.A.)
